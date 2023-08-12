@@ -1,6 +1,6 @@
 version : "3.3"
 services :
   web :
-     image : softconsist/my-notes-app2:latest
+     image : softconsist/my-note-app:tagname
      ports :
          - "8000:8000"
