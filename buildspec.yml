@@ -19,7 +19,7 @@ phases:
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
 
       # Generate a timestamp in the format YYYYMMDDHHMMSS
-      timestamp=$(date +%Y%m%d%H%M%S)
+      - timestamp=$(date +%Y%m%d%H%M%S)
 
       # Build the Docker image with the timestamp as a tag
       - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/django-notes-app:$timestamp" .
