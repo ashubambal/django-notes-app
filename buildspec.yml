@@ -20,7 +20,6 @@ phases:
 
       # Generate a timestamp in the format YYYYMMDDHHMMSS
       - timestamp=$(date +%Y%m%d%H)
-
       # Build the Docker image with the timestamp as a tag
       - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/django-notes-app:$timestamp" .
 
