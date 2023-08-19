@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+
+hooks:
+  ApplicationStop:
+    - location: docker-compose down
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: docker-compose up -d
+      timeout: 300
+      runas: root
