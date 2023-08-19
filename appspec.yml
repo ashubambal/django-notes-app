@@ -3,10 +3,10 @@ os: linux
 
 hooks:
   ApplicationStop:
-    - location: "/usr/local/bin/docker-compose down"
+    - location: scripts/stop_container.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: "/usr/local/bin/docker-compose up -d"
+    - location: scripts/start_container.sh
       timeout: 300
       runas: root
