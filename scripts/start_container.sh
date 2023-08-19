@@ -7,7 +7,7 @@
 #docker run -d -p 8000:8000 softconsist/django-notes-app
 
 # Generate a timestamp in the format YYYY-MM-DD-HHMMSS
-timestamp=$(date +%Y%m%d%H%M%S)
+timestamp=$(date +%Y%m%d%H%M)
 
 # Define the Docker image name and tag
 docker_image="softconsist/django-notes-app"
