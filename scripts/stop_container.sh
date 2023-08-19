@@ -1,3 +1,6 @@
 #!/bin/bash
 
-echo "docker container running"
+# Killing old container
+
+containerid=$(docker ps -q) 
+docker rm -f $containerid
