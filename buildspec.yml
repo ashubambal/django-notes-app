@@ -1,5 +1,4 @@
 version: 0.2
-
 env:
   parameter-store:
      DOCKER_REGISTRY_USERNAME: "/myapp/docker_credentials/username"
@@ -11,7 +10,7 @@ phases:
       python: 3.11
   pre_build:
     commands:
-      - pip install -r requirements.txt
+     # - pip install -r requirements.txt
   build:
     commands:
       - echo "Building docker images" 
@@ -25,9 +24,4 @@ phases:
   #files:
     # - location
     # - location
-  #name: $(date +%Y-%m-%d)
-  #discard-paths: yes
-  #base-directory: location
-#cache:
-  #paths:
-    # - paths
+
