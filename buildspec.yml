@@ -10,7 +10,7 @@ phases:
       python: 3.11
   pre_build:
     commands:
-     # - pip install -r requirements.txt
+     - pip install -r requirements.txt
   build:
     commands:
       - echo "Building docker images" 
@@ -19,7 +19,7 @@ phases:
       - docker push "$DOCKER_REGISTRY_USERNAME/django-notes-app:latest"
   post_build:
     commands:
-      - echo "Build done"
+      - echo "Build Completed Successfully"
 #artifacts:
   #files:
     # - location
